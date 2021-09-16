@@ -35,5 +35,5 @@ export const Disabled = Template.bind({});
 Disabled.args = {
   variant: 'primary',
   disabled: true,
-  label: 'Button',
+  label: 'resetar senha',
 };
