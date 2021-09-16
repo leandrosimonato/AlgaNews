@@ -1,25 +1,19 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ color: string }>`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-
+  color: #274060;
   span.Description {
-    font-size: 14px;
-    font-weight: 500;
-    color: #274060;
+    font-size: 12px;
+    text-transform: lowercase;
   }
-
   span.Currency {
-    font-size: 14px;
-    font-weight: 500;
-    color: #274060;
+    color: ${(p) => p.color};
   }
-
   span.Value {
-    font-size: 14px;
-    font-weight: 500;
-    color: #274060;
+    font-size: 18px;
+    font-weight: 800;
+    color: ${(p) => p.color};
   }
 `;
