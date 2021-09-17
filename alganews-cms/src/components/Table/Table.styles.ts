@@ -15,6 +15,7 @@ export const HeadingRow = styled.tr``;
 export const HeadingCell = styled.th`
   height: 32px;
   font-size: 14px;
+  padding: 0 8px;
 `;
 
 export const Body = styled.tbody``;

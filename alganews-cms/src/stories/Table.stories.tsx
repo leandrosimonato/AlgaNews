@@ -81,7 +81,7 @@ export function Default() {
           Cell: () => <Icon path={mdiOpenInNew} size={'14px'} color={'#09f'} />,
         },
         {
-          Header: 'Artigo',
+          Header: () => <div style={{ textAlign: 'left'}}>Artigo</div>,
           accessor: 'title',
           width: 320,
           Cell: (props) => (
@@ -104,7 +104,7 @@ export function Default() {
           ),
         },
         {
-          Header: 'Views',
+          Header: () => <div style={{ textAlign: 'right'}}>Views</div>,
           accessor: 'views',
           Cell: (props) => (
             <div
@@ -119,7 +119,7 @@ export function Default() {
           ),
         },
         {
-          Header: 'Conversões',
+          Header: () => <div style={{ textAlign: 'right'}}>Conversões</div>,
           accessor: 'conversions',
           Cell: (props) => (
             <div
@@ -136,11 +136,12 @@ export function Default() {
           ),
         },
         {
-          Header: 'Ações',
+          id: Math.random().toString(),
+          Header: () => <div style={{ textAlign: 'right'}}>Ações</div>,
           Cell: () => (
             <div
               style={{
-                textAlign: 'right'
+                textAlign: 'right',
               }}
             >
               todo: actions
@@ -165,23 +166,75 @@ export function NoData() {
     () => [
       {
         Header: '',
-        accessor: 'preview', // accessor is the "key" in the data
+        accessor: 'id', // accessor is the "key" in the data
+        Cell: () => <Icon path={mdiOpenInNew} size={'14px'} color={'#09f'} />,
       },
       {
-        Header: 'Column 1',
-        accessor: 'col1',
+        Header: 'Artigo',
+        accessor: 'title',
         width: 320,
-        Cell: (props) => <div style={{ textAlign: 'right' }}>{props.value}</div>,
+        Cell: (props) => (
+          <div
+            style={{
+              textAlign: 'left',
+              display: 'flex',
+              gap: 8,
+              alignItems: 'center',
+            }}
+          >
+            <img
+              width={24}
+              height={24}
+              src={props.row.original.author.avatar}
+              alt={props.row.original.author.name}
+            />
+            {props.value}
+          </div>
+        ),
       },
       {
-        Header: 'Column 2',
-        accessor: 'col2',
-        Cell: (props) => <div style={{ textAlign: 'center' }}>{props.value}</div>,
+        Header: 'Views',
+        accessor: 'views',
+        Cell: (props) => (
+          <div
+            style={{
+              textAlign: 'right',
+              fontWeight: 700,
+              fontFamily: '"Roboto mono", monospace',
+            }}
+          >
+            {props.value.toLocaleString('pt-br')}
+          </div>
+        ),
+      },
+      {
+        Header: 'Conversões',
+        accessor: 'conversions',
+        Cell: (props) => (
+          <div
+            style={{
+              display: 'flex',
+              gap: 8,
+              fontWeight: 700,
+              fontFamily: '"Roboto mono", monospace',
+            }}
+          >
+            <span>{props.value.thousands}k</span>
+            <span style={{ color: '#09f' }}>{props.value.percentage}%</span>
+          </div>
+        ),
       },
       {
         Header: 'Ações',
-        accessor: 'actions',
-        Cell: (props) => <div style={{ textAlign: 'right' }}>{props.value}</div>,
+        Cell: () => (
+          <div
+            style={{
+              textAlign: 'right',
+            }}
+          >
+            todo: actions
+          </div>
+        ),
       },
     ],
     []
