@@ -19,7 +19,7 @@ type Post = {
     avatar: string;
   };
   conversions: {
-    thousands: number;
+    thoushands: number;
     percentage: number;
   };
 };
@@ -36,7 +36,7 @@ export function Default() {
         id: 1,
         conversions: {
           percentage: 64.35,
-          thousands: 607,
+          thoushands: 607,
         },
         title: 'Como dobrei meu salário aprendendo somente React',
         views: 985415,
@@ -50,7 +50,7 @@ export function Default() {
         id: 2,
         conversions: {
           percentage: 64.35,
-          thousands: 607,
+          thoushands: 607,
         },
         title: 'React.js vs. React Native: a REAL diferença entre os dois',
         views: 985415,
@@ -64,7 +64,7 @@ export function Default() {
         id: 3,
         conversions: {
           percentage: 95.35,
-          thousands: 845,
+          thoushands: 845,
         },
         title: 'Como dobrei meu salário aprendendo somente React',
         views: 985415,
@@ -111,7 +111,7 @@ export function Default() {
             style={{
               textAlign: 'right',
               fontWeight: 700,
-              fontFamily: '"Roboto mono", Monospace',
+              fontFamily: '"Roboto mono", monospace',
             }}
           >
             {props.value.toLocaleString('pt-br')}
@@ -119,7 +119,7 @@ export function Default() {
         ),
       },
       {
-        Header: () => <div style={{ textAlign: 'right' }}>Conversões</div>,
+        Header: () => <div style={{ textAlign: 'left' }}>Conversões</div>,
         accessor: 'conversions',
         Cell: (props) => (
           <div
@@ -130,7 +130,7 @@ export function Default() {
               fontFamily: '"Roboto mono", monospace',
             }}
           >
-            <span>{props.value.thousands}k</span>
+            <span>{props.value.thoushands}k</span>
             <span style={{ color: '#09f' }}>{props.value.percentage}%</span>
           </div>
         ),
@@ -138,25 +138,18 @@ export function Default() {
       {
         id: Math.random().toString(),
         Header: () => <div style={{ textAlign: 'right' }}>Ações</div>,
-        Cell: () => (
-          <div
-            style={{
-              textAlign: 'right',
-            }}
-          >
-            todo: actions
-          </div>
-        ),
+        Cell: () => <div style={{ textAlign: 'right' }}>todo: actions</div>,
       },
     ],
     []
   );
 
-  const instance = useTable<Post>({ data, columns });
-  return <Table<Post> instance={instance} />;
+  const insntace = useTable<Post>({ data, columns });
+
+  return <Table<Post> instance={insntace} />;
 }
 
-export function NoData() {
+export function WithoutData() {
   const data = useMemo<Post[]>(() => [], []);
 
   const columns = useMemo<Column<Post>[]>(
@@ -216,27 +209,20 @@ export function NoData() {
               fontFamily: '"Roboto mono", monospace',
             }}
           >
-            <span>{props.value.thousands}k</span>
+            <span>{props.value.thoushands}k</span>
             <span style={{ color: '#09f' }}>{props.value.percentage}%</span>
           </div>
         ),
       },
       {
         Header: 'Ações',
-        Cell: () => (
-          <div
-            style={{
-              textAlign: 'right',
-            }}
-          >
-            todo: actions
-          </div>
-        ),
+        Cell: () => <div style={{ textAlign: 'right' }}>todo: actions</div>,
       },
     ],
     []
   );
 
-  const instance = useTable<Post>({ data, columns });
-  return <Table<Post> instance={instance} />;
+  const insntace = useTable<Post>({ data, columns });
+
+  return <Table<Post> instance={insntace} />;
 }
