@@ -1,4 +1,6 @@
 import { Line } from 'react-chartjs-2';
+import Heading from '../Typography/Heading';
+import * as CH from './Chart.styles'
 
 const data = {
   labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
@@ -8,22 +10,23 @@ const data = {
       data: [500, 400, 600, 100, 800, 20],
       fill: true,
       backgroundColor: '#0099FF',
-      borderColor: 'transparent',
-      yAxisID: 'y-axis-1',
+      borderColor: '#0099FF',
+      borderWidth: 0.5,
+      yAxisID: 'cashflow',
     },
     {
       label: 'Despesas',
-      data: [1, 2, 1, 1, 2, 2],
+      data: [100, 200, 250, 500, 1000, 600],
       fill: true,
       backgroundColor: '#274060',
-      borderColor: 'transparent',
-      yAxisID: 'y-axis-2',
+      borderColor: '#274060',
+      yAxisID: 'cashflow',
     },
   ],
 };
 
 const options: Chart.ChartOptions = {
-  maintainAspectRatio: false,
+  maintainAspectRatio: true,
   elements: {
     line: {
       tension: 0
@@ -38,22 +41,21 @@ const options: Chart.ChartOptions = {
     },
   },
   scales: {
+    xAxes: [
+      {
+        display: true,
+        gridLines: {
+          display: false,
+        }
+      }
+    ],
     yAxes: [
       {
         type: 'linear',
-        display: true,
+        display: false,
         position: 'left',
-        id: 'y-axis-1',
-      },
-      {
-        type: 'linear',
-        display: true,
-        position: 'right',
-        id: 'y-axis-2',
-        gridLines: {
-          display: false,
-        },
-      },
+        id: 'cashflow',
+      }
     ],
   },
 };
@@ -62,8 +64,14 @@ export interface ChartProps {}
 
 export default function Chart() {
   return (
-    <div>
-      <Line type='line' height={250} data={data} options={options} />
-    </div>
+    <CH.ChartWrapper style={{ width: 700}}>
+      <div style={{ marginBottom: 16 }}>
+        <Heading level={3}>
+          {'Média de performance nos útimos 12 meses'}
+        </Heading>
+      </div>
+      <Line type='line' height={139} width={600} data={data} options={options} />
+    </CH.ChartWrapper>
   );
 }
+
