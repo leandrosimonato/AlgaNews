@@ -43,7 +43,7 @@ export const Percentage = styled.span`
   font-size: 1.2em;
 `
 
-export const caption = styled.span`
+export const Caption = styled.span`
   font-size: 1em;
   font-weight: 400;
   text-transform: lowercase;
