@@ -48,9 +48,7 @@ export default function Chart({ data, title }: ChartProps) {
   return (
     <CH.ChartWrapper style={{ width: 700 }}>
       <div style={{ marginBottom: 16 }}>
-        <Heading level={3}>
-          { title }
-        </Heading>
+        <Heading level={3}>{title}</Heading>
       </div>
       {data ? (
         <Line
@@ -61,7 +59,7 @@ export default function Chart({ data, title }: ChartProps) {
           options={options}
         />
       ) : (
-          <NoData height={ 139 }/>
+        <NoData height={139} />
       )}
     </CH.ChartWrapper>
   );

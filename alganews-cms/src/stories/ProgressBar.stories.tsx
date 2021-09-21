@@ -1,7 +1,7 @@
 import { Story, Meta } from '@storybook/react';
 import ProgressBar, {
   ProgressBarProps,
-} from '../components/ProgressBar/ProgressBar';
+} from '../app/components/ProgressBar/ProgressBar';
 
 export default {
   title: 'Example/ProgressBar',

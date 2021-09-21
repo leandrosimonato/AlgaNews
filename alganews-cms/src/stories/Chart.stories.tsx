@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/react';
-import Chart, { ChartProps } from '../components/Chart/Chart';
+import Chart, { ChartProps } from '../app/components/Chart/Chart';
 
 const data = {
   labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
@@ -34,7 +34,7 @@ const Template: Story<ChartProps> = (args) => <Chart {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   title: 'Média de performance nos últimos 12 meses.',
-  data
+  data,
 };
 
 export const WithoutData = Template.bind({});

@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useLocation, useParams } from 'react-router';
 
 function UseQuery() {
-  return new URLSearchParams(useLocation().search)
+  return new URLSearchParams(useLocation().search);
 }
 
 export default function CalcView() {
