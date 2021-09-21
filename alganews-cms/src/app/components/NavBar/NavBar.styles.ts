@@ -13,6 +13,8 @@ export const Item = styled.li`
   a {
     text-decoration: none;
     color: #274060;
+    &.active {
+      color: #09f;
+    }
   }
 `;
-

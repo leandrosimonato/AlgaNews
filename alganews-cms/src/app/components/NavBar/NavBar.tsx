@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import * as NAV from './NavBar.styles'
 
 export default function NavBar() {
@@ -6,10 +6,14 @@ export default function NavBar() {
     <>
       <NAV.List>
         <NAV.Item>
-          <Link to='/'>Home</Link>
+          <NavLink exact to='/'>
+            Home
+          </NavLink>
         </NAV.Item>
         <NAV.Item>
-          <Link to='/contato'>Contato</Link>
+          <NavLink exact to='/contato'>
+            Contato
+          </NavLink>
         </NAV.Item>
       </NAV.List>
     </>
