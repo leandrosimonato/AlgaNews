@@ -7,13 +7,15 @@ import Home from './app/views/Home.view';
 import NotFound404 from './app/views/NotFound404.view';
 import GlobalStyles from './core/Global.styles';
 import EditorsListView from './app/views/EditorList.view';
+import PostCreateView from './app/views/PostCreate.view';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Switch>
         <Route path={'/'} exact component={Home} />
-        <Route path="/editores" exact component={EditorsListView} />
+        <Route path='/editores' exact component={EditorsListView} />
+        <Route path='/posts/criar' exact component={PostCreateView} />
         <Route component={NotFound404} />
       </Switch>
     </BrowserRouter>
