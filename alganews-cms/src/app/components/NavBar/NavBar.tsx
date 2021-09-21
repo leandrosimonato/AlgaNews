@@ -11,8 +11,8 @@ export default function NavBar() {
           </NavLink>
         </NAV.Item>
         <NAV.Item>
-          <NavLink exact to='/contato'>
-            artigos
+          <NavLink exact to='/editores'>
+            Editores
           </NavLink>
         </NAV.Item>
         <NAV.Item>
