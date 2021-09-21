@@ -1,6 +1,7 @@
 import usePageTitle from '../../core/hooks/usePageTitle';
 import PostList from '../features/PostsList';
-import UserMetrics from '../features/UserMetrics';
+import UserPerformance from '../features/UserPerformance';
+import UserTopTags from '../features/UserTopTags';
 import DefaultLayout from '../layouts/Default';
 
 export default function Home() {
@@ -8,7 +9,8 @@ export default function Home() {
 
   return (
     <DefaultLayout>
-      <UserMetrics />
+      <UserTopTags />
+      <UserPerformance />
       <PostList />
     </DefaultLayout>
   );

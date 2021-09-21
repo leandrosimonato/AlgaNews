@@ -2,7 +2,7 @@ import Chart from '../components/Chart/Chart';
 
 const FAKE_DATA = {
   labels: [
-    'Batata',
+    'Janeiro',
     'Fevereiro',
     'Março',
     'Abril',

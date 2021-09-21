@@ -23,7 +23,7 @@ export default function PostList() {
     () => [
       {
         author: {
-          name: 'Daniel Bonifacio',
+          name: 'Leandro Simonato',
           avatar:
             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNf0vAZLggJoZxGKpfOa3EBClHkwQmmvv9Lg&usqp=CAU',
         },
@@ -37,7 +37,7 @@ export default function PostList() {
       },
       {
         author: {
-          name: 'Daniel Bonifacio',
+          name: 'Leandro Simonato',
           avatar:
             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNf0vAZLggJoZxGKpfOa3EBClHkwQmmvv9Lg&usqp=CAU',
         },
@@ -51,7 +51,7 @@ export default function PostList() {
       },
       {
         author: {
-          name: 'Daniel Bonifacio',
+          name: 'Leandro Simonato',
           avatar:
             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNf0vAZLggJoZxGKpfOa3EBClHkwQmmvv9Lg&usqp=CAU',
         },
