@@ -1,16 +1,18 @@
 import { Link } from 'react-router-dom';
+import * as NAV from './NavBar.styles'
 
 export default function NavBar() {
   return (
-    <nav>
-      <ul>
-        <li>
+    <>
+      <NAV.List>
+        <NAV.Item>
           <Link to='/'>Home</Link>
-        </li>
-        <li>
+        </NAV.Item>
+        <NAV.Item>
           <Link to='/contato'>Contato</Link>
-        </li>
-      </ul>
-    </nav>
+        </NAV.Item>
+      </NAV.List>
+    </>
   );
 }
+
