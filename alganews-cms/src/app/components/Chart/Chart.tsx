@@ -1,4 +1,3 @@
-import { title } from 'process';
 import { Line } from 'react-chartjs-2';
 import NoData from '../NoData/NoData';
 import Heading from '../Typography/Heading';
