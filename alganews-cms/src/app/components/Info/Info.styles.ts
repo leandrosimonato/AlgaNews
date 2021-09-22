@@ -1,3 +1,4 @@
+import { transparentize } from 'polished';
 import styled from 'styled-components';
 
 export const InfoWrapper = styled.div`
@@ -7,6 +8,7 @@ export const InfoWrapper = styled.div`
   justify-content: center;
   background-color: #f3f8fa;
   width: 373px;
+  border: 1px solid ${transparentize(0.9, '#274060')};
 `;
 export const InfoInnerContent = styled.div`
   display: flex;
