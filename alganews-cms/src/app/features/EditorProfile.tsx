@@ -9,6 +9,7 @@ interface EditorProfileProps {
 }
 
 function EditorProfile(props: EditorProfileProps) {
+  
   return (
     <EditorProfileWrapper>
       <EditorHeadline>
@@ -18,7 +19,7 @@ function EditorProfile(props: EditorProfileProps) {
           }
         />
         <Name>Leandro Simonato</Name>
-        <Description>Editor há 5 anos</Description>
+        <Description>Editor há 1 ano</Description>
       </EditorHeadline>
 
       <Divisor />
