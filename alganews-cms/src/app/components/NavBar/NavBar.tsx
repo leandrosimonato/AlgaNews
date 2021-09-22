@@ -7,17 +7,17 @@ export default function NavBar() {
       <NAV.List>
         <NAV.Item>
           <NavLink exact to='/'>
-            Home
+            início
           </NavLink>
         </NAV.Item>
         <NAV.Item>
           <NavLink exact to='/editores'>
-            Editores
+            Artigos
           </NavLink>
         </NAV.Item>
         <NAV.Item>
           <NavLink exact to='/posts/criar'>
-            Novo Post
+            portfólio
           </NavLink>
         </NAV.Item>
       </NAV.List>
